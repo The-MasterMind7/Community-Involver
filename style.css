@@ -1,0 +1,361 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+.main-nav {
+    background-color: #333; /* Darker background for contrast */
+    padding: 10px 0; /* Vertical padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Clearer shadow */
+    position: sticky; /* Keeps the nav at the top when scrolling */
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal navigation */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.main-nav ul li {
+    margin: 0 10px; /* Horizontal spacing between buttons */
+}
+
+.main-nav ul li a {
+    display: inline-block; /* Make the entire link a clickable button */
+    color: #ffffff; /* White text */
+    background-color: #5cb85c; /* A distinct green for buttons */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.0em;
+    padding: 10px 20px;
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for all properties */
+    box-shadow: 0 4px #4cae4c; /* 'Popping' depth effect */
+    position: relative;
+    top: 0;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+    background-color: #47a447; /* Darker green on hover */
+    top: 2px; /* Moves button down for 'pressed' effect */
+    box-shadow: 0 2px #4cae4c; /* Reduced shadow on hover */
+    color: #ffffff; /* Ensure text remains white */
+}
+
+#home-page {
+    text-align: center;
+    background-image: url('https://www.pexels.com/photo/a-volunteer-people-helping-others-6646770/'); /* Placeholder image URL */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; /* To make text readable over the image */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+    max-width: 900px;
+    color: #ffffff; /* Bright white text for better contrast */
+}
+
+#home-page h1 {
+    color: #ffffff; /* Brighter title */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for pop */
+}
+
+#home-page p {
+    font-size: 1.1em;
+    color: #f0f0f0; /* Slightly off-white for body text */
+    margin-bottom: 10px;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Text shadow for pop */
+}
+
+#home-page {
+    text-align: center;
+    background-image: url('https://www.pexels.com/photo/a-volunteer-people-helping-others-6646770/'); /* Placeholder image URL */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; /* To make text readable over the image */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+    max-width: 900px;
+    color: #ffffff; /* Bright white text for better contrast */
+}
+
+#home-page h1 {
+    color: #ffffff; /* Brighter title */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for pop */
+}
+
+#home-page p {
+    font-size: 1.1em;
+    color: #f0f0f0; /* Slightly off-white for body text */
+    margin-bottom: 10px;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Text shadow for pop */
+}
+
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+#elements-selection,
+#recommended-elements,
+#friend-suggestions {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+#elements-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.element-item,
+.recommendation-item,
+.friend-suggestion-item {
+    background-color: #e8f5e9; /* Light green */
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.element-item:hover {
+    background-color: #dcedc8; /* Slightly darker green on hover */
+    transform: translateY(-2px);
+}
+
+.element-item.selected {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: 2px solid #388E3C;
+    transform: scale(1.02);
+}
+
+.recommendation-item {
+    background-color: #e0f7fa; /* Light cyan */
+    margin-right: 10px; /* Space between items in a line */
+    display: inline-block; /* Allow items to sit next to each other */
+}
+
+.friend-suggestion-item {
+    background-color: #f3e5f5; /* Light purple */
+    margin-right: 10px; /* Space between items in a line */
+    display: inline-block; /* Allow items to sit next to each other */
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+#service-idea-page {
+    text-align: center;
+    background-color: #e8f5e9; /* Light green background */
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    color: #2e7d32;
+}
+
+#service-idea-page h1 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+#service-idea-page p {
+    font-size: 1.1em;
+    color: #388e3c;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+#service-idea-page form {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+#service-idea-page label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+#service-idea-page input[type="text"],
+#service-idea-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#service-idea-page input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#service-idea-page input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#service-idea-page {
+    text-align: center;
+    background-color: #e8f5e9; /* Light green background */
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    color: #2e7d32;
+}
+
+#service-idea-page h1 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+#service-idea-page p {
+    font-size: 1.1em;
+    color: #388e3c;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+#service-idea-page form {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+#service-idea-page label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+#service-idea-page input[type="text"],
+#service-idea-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#service-idea-page input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#service-idea-page input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#service-idea-page {
+    text-align: center;
+    background-color: #e8f5e9; /* Light green background */
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    color: #2e7d32;
+}
+
+#service-idea-page h1 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+#service-idea-page p {
+    font-size: 1.1em;
+    color: #388e3c;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+#service-idea-page form {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+#service-idea-page label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+#service-idea-page input[type="text"],
+#service-idea-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#service-idea-page input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#service-idea-page input[type="submit"]:hover {
+    background-color: #45a049;
+}
